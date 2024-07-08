@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#222">
   <meta name="description" content="REVOLVE">
   <title>REVOLVE</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./ddd/icon-512x512.png">
   <link rel="manifest" href="./ddd/manifest@CKHnufNj.webmanifest" crossorigin="use-credentials">
 
@@ -870,7 +871,24 @@
   <!-- <script src="https://unpkg.com/@rollup/browser/dist/rollup.browser.js"></script> -->
   <!-- <script src="./ddd/libs/rollup.browser.js"></script> -->
 
-
+  <script>
+    (() => {
+      const div = document.createElement('div');
+      div.id = "common_modal_processing";
+      div.classList.add('modalview_modal');
+      div.classList.add('modalview_modal_no_alpha');
+      div.style.cssText = `animation-name: fadein_zoomin;animation-duration: 1s; background-color: white !important;`;
+      div.style.zIndex = "999";
+      document.body.appendChild(div);
+      lottie.loadAnimation({
+        container: document.getElementById('common_modal_processing'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './asset/animation/logo_5sec.json'
+      });
+    })();  
+  </script>
 
 </body>
 
